@@ -2,7 +2,8 @@
 <html>
     <title>Contact Us</title>
     <head>
-        <link rel="stylesheet" href="./style3.css">
+        <link rel="stylesheet" href="./contact us.css">
+        <script src="./contact us.js"></script>
     </head>
     <body>
 
@@ -13,14 +14,14 @@
                     <tr>
                         <td>
                             <a href="Index.html">
-                                <img src="Assets/Logo/letter-acd-logo-design-premium-vector_408130-248.jpg" width="100px" alt="">
+                                <img id="logo" width="100px" alt="">
                             </a>
                             </td>
                         <td align="right">
                             <nav class="navbar">
-                                <a href="Index.html">Home</a>
-                                <a href="About Me.html" style="margin: 16px;">About Me</a>
-                                <a href="Contact Us.html">Contact Us</a>
+                                <a href="Index.html" id="home"></a>
+                                <a href="About Me.html" id="about me" style="margin: 16px;"></a>
+                                <a href="Contact Us.html" id="contact us"></a>
                             </nav>
                         </td>
                     </tr>
@@ -34,11 +35,12 @@
             <table class="table2">
                 <tr>
                     <td class="tabled">
-            <h1 class="header">Contact Us</h1>
-            <h5 class="header5">Need to get in touch with me? This is where you can <br> get in touch with me and communicate. My contact <br>information will be below, so it could be easy for you <br>to get in touch. Enquiries availabe here.</h5>
+            <h1 class="header" id="head"></h1>
+            <h5 class="header5" id="head5"></h5>
 
             <td class="tabledata">
-            <form class="form">
+            <form class="form" id="myform" action="https://formspree.io/f/mzbqgpwo"
+            method="POST">
 
                 <div>
                     <label for="Fname">First Name</label>
@@ -55,13 +57,6 @@
                 <br>
 
                 <div>
-                    <label for="Mname">Message</label>
-                    <input type="textarea" id="Mname" name="Mname" placeholder="Message">
-                </div>
-
-                <br>
-
-                <div>
                     <label for="Ename">Email</label>
                     <input type="text" id="Ename" name="Ename" placeholder="Example@gmail.com">
                 </div>
@@ -69,7 +64,14 @@
                 <br>
 
                 <div>
-                    <input type="Submit">
+                    <label for="Mname" class="msgarea"></label>
+                    <textarea id="Mname" rows="4" placeholder="Message"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <button type="Submit">Send</button>
                 </div>
             </form>
             </td>
@@ -81,19 +83,17 @@
         <footer>
             <table class="table4">
                 <tr>
-                    <td class="td"><b>Atteridgeville, Pretoria, 0008</b></td>
+                    <td class="td" id="address"></td>
                 <td class="tabledata5">
-                    <iframe class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57486.09377163489!2d28.03098475750287!3d-25.774498466038867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957d762feb8665%3A0x3484abdc3411c01b!2sAtteridgeville%2C%20Pretoria%2C%200006!5e0!3m2!1sen!2sza!4v1675465093189!5m2!1sen!2sza" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="map" id="map"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </td>
                 </tr>
                 <tr>
                     <td class="tabledata2">
-                        <img class="img1"
-                        src="Assets/Icon/1675446142728.jpg"
+                        <img class="img1" id="img1"
                         alt="">
-                        <img class="img2"
-                        src="Assets/Icon/1675446142731.png"
+                        <img class="img2" id="img2"
                         alt="">
                     </td>
                 </tr>
@@ -101,8 +101,8 @@
             <table class="table3">
                 <tr>
                     <td class="tabledata3">
-                        <button class="button">keabetswemabeba@gmail.com</button>
-                        <button class="button2">+27719360033</button>
+                        <button class="button" id="button"></button>
+                        <button class="button2" id="button2"></button>
                     </td>
                 </tr>
             </table>
